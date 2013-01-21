@@ -1,5 +1,7 @@
 //package com.adamatomic.flixel
 #pragma strict
+#pragma implicit
+#pragma downcast
 
 //{
 //	import flash.display.Sprite;

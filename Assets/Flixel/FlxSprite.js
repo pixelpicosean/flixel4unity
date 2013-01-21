@@ -1,4 +1,6 @@
 #pragma strict
+#pragma implicit
+#pragma downcast
 
 //package com.adamatomic.flixel
 //{
@@ -210,7 +212,7 @@
             // }
 			getScreenXY(_p);
 
-            _sprite.xform.SetTRS(new Vector3(_p.x+_bw>>1,FlxG.height-(_p.y+_bh>>1),0),
+            _sprite.xform.SetTRS(new Vector3(_p.x+_bw/2,FlxG.height-(_p.y+_bh/2),0),
                                  Quaternion.Euler(0, 0, -angle),
                                  new Vector3(scale.x,scale.y,1));
 

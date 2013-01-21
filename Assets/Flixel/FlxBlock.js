@@ -1,4 +1,6 @@
 #pragma strict
+#pragma implicit
+#pragma downcast
 
 //package com.adamatomic.flixel
 //{
@@ -114,7 +116,7 @@ class FlxBlock extends FlxCore
                             _sprites[i] = sprite;
 		                }
 				        //if (sprite.hidden) FlxG.SpriteManager.ShowSprite(sprite);
-    				    sprite.xform.SetTRS(new Vector3(_p.x+rect.width>>1,FlxG.height-(_p.y+rect.height>>1),0),
+    				    sprite.xform.SetTRS(new Vector3(_p.x+rect.width/2,FlxG.height-(_p.y+rect.height/2),0),
     				                        Quaternion.identity,
     				                        Vector3.one);
             		}
