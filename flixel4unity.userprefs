@@ -1,11 +1,12 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Flixel/FlxCore.js">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Flixel/FlxG.js">
     <Files>
-      <File FileName="Assets/Flixel/FlxArray.js" Line="92" Column="3" />
-      <File FileName="Assets/Flixel/FlxBlock.js" Line="119" Column="1" />
-      <File FileName="Assets/Flixel/FlxSprite.js" Line="215" Column="80" />
-      <File FileName="Assets/Flixel/FlxCore.js" Line="85" Column="1" />
+      <File FileName="Assets/Flixel/FlxArray.js" Line="1" Column="1" />
+      <File FileName="Assets/Flixel/FlxBlock.js" Line="1" Column="1" />
+      <File FileName="Assets/Flixel/FlxSprite.js" Line="1" Column="1" />
+      <File FileName="Assets/Flixel/FlxCore.js" Line="1" Column="1" />
+      <File FileName="Assets/Flixel/FlxG.js" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
