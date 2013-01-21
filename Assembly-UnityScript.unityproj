@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+	<Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+	<ProductVersion>10.0.20506</ProductVersion>
+	<SchemaVersion>2.0</SchemaVersion>
+	<ProjectGuid>{815A76D1-3BE4-0E1F-7941-8351801A7CE8}</ProjectGuid>
+	<OutputType>Library</OutputType>
+	<AppDesignerFolder>Properties</AppDesignerFolder>
+	<RootNamespace></RootNamespace>
+	<AssemblyName>Assembly-UnityScript</AssemblyName>
+	<TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+	<FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+	<DebugSymbols>true</DebugSymbols>
+	<DebugType>full</DebugType>
+	<Optimize>false</Optimize>
+	<OutputPath>Temp\bin\Debug\</OutputPath>
+	<DefineConstants>DEBUG;TRACE;UNITY_3_5_7;UNITY_3_5;UNITY_EDITOR;ENABLE_PROFILER;UNITY_STANDALONE_OSX;ENABLE_GENERICS;ENABLE_DUCK_TYPING;ENABLE_TERRAIN;ENABLE_MOVIES;ENABLE_WEBCAM;ENABLE_MICROPHONE;ENABLE_NETWORK;ENABLE_CLOTH;ENABLE_WWW;ENABLE_SUBSTANCE</DefineConstants>
+	<ErrorReport>prompt</ErrorReport>
+	<WarningLevel>4</WarningLevel>
+	<NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+	<DebugType>pdbonly</DebugType>
+	<Optimize>true</Optimize>
+	<OutputPath>Temp\bin\Release\</OutputPath>
+	<DefineConstants>TRACE</DefineConstants>
+	<ErrorReport>prompt</ErrorReport>
+	<WarningLevel>4</WarningLevel>
+	<NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+	<Reference Include="System" />
+    <Reference Include="System.XML" />
+	<Reference Include="System.Core" />
+	<Reference Include="UnityEngine">
+	  <HintPath>/Applications/Unity/Unity.app/Contents/Frameworks/Managed/UnityEngine.dll</HintPath>
+	</Reference>
+	<Reference Include="UnityEditor">
+	  <HintPath>/Applications/Unity/Unity.app/Contents/Frameworks/Managed/UnityEditor.dll</HintPath>
+	</Reference>
+  </ItemGroup>
+  <ItemGroup>
+     <Compile Include="Assets\Flixel\FlxAnim.js" />
+     <Compile Include="Assets\Flixel\FlxArray.js" />
+     <Compile Include="Assets\Flixel\FlxBlock.js" />
+     <Compile Include="Assets\Flixel\FlxButton.js" />
+     <Compile Include="Assets\Flixel\FlxCore.js" />
+     <Compile Include="Assets\Flixel\FlxEmitter.js" />
+     <Compile Include="Assets\Flixel\FlxFactory.js" />
+     <Compile Include="Assets\Flixel\FlxG.js" />
+     <Compile Include="Assets\Flixel\FlxGame.js" />
+     <Compile Include="Assets\Flixel\FlxLayer.js" />
+     <Compile Include="Assets\Flixel\FlxLogoPixel.js" />
+     <Compile Include="Assets\Flixel\FlxSprite.js" />
+     <Compile Include="Assets\Flixel\FlxState.js" />
+     <Compile Include="Assets\Flixel\FlxText.js" />
+     <Compile Include="Assets\Flixel\FlxTilemap.js" />
+     <Compile Include="Assets\Flixel\Point.js" />
+     <Compile Include="Assets\Flixel\Rectangle.js" />
+     <Compile Include="Assets\Mode\Bot.js" />
+     <Compile Include="Assets\Mode\BotBullet.js" />
+     <Compile Include="Assets\Mode\Bullet.js" />
+     <Compile Include="Assets\Mode\MegaSprite.js" />
+     <Compile Include="Assets\Mode\MenuState.js" />
+     <Compile Include="Assets\Mode\Mode.js" />
+     <Compile Include="Assets\Mode\PlayState.js" />
+     <Compile Include="Assets\Mode\PlayStateTiles.js" />
+     <Compile Include="Assets\Mode\Player.js" />
+     <Compile Include="Assets\Mode\Spawner.js" />
+     <Compile Include="Assets\Mode\VictoryState.js" />
+     <None Include="Assets\Mode\data\map.txt" />
+     <None Include="Assets\Mode\data\map2.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
+      <Project>{0E434FB3-707A-C47C-03AA-FDA1EB31938D}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+	   Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  
+</Project>
