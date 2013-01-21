@@ -1,4 +1,6 @@
 #pragma strict
+#pragma implicit
+#pragma downcast
 
 //package com.adamatomic.flixel
 //{
@@ -83,9 +85,9 @@ class FlxArray extends Array
 		}
 		
 		//@desc		Pops every entry out of the array
-		public function clear():void
-		{
-			this.length = 0;
-		}
+		//public function clear():void
+		//{
+		//	this.length = 0;
+		//}
 	}
 //}
