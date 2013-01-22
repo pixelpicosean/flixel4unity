@@ -20,26 +20,26 @@
 			FlxG.state = this;
 		}
 		
-		//@desc		Adds a new FlxCore subclass (FlxSprite, FlxBlock, etc) to the game loop
+		//@desc		Adds a new FlxBasic subclass (FlxSprite, FlxBlock, etc) to the game loop
 		//@param	Core	The object you want to add to the game loop
-		virtual public function add(Core:FlxCore):FlxCore
+		public function add(Core:FlxBasic):FlxBasic
 		{
 			return _layer.add(Core);
 		}
 		
 		//@desc		Automatically goes through and calls update on everything you added to the game loop, override this function to handle custom input and perform collisions
-		virtual public function update():void
+		public function update():void
 		{
 			_layer.update();
 		}
 		
 		//@desc		Automatically goes through and calls render on everything you added to the game loop, override this loop to do crazy graphical stuffs I guess?
-		virtual public function render():void
+		public function render():void
 		{
 			_layer.render();
 		}
 		
 		//@desc		Override this function to handle any deleting or "shutdown" type operations you might need (such as removing traditional Flash children like Sprite objects)
-		virtual public function destroy():void { _layer.destroy(); }
+		public function destroy():void { _layer.destroy(); }
 	}
 //}

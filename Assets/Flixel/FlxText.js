@@ -11,7 +11,7 @@
 //	
 //	//@desc		A basic text display class, can do some fun stuff though like flicker and rotate
 //	public
- class FlxText extends FlxCore
+ class FlxText extends FlxBasic
 	{
 		public var angle:Number;
 		

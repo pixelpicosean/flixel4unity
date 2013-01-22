@@ -20,7 +20,7 @@ class MegaSprite extends FlxSprite
 			
 		    // find the corner of all the sprites/blocks
 		    var i:uint;
-		    var thing:FlxCore = sprites[0];
+		    var thing:FlxBasic = sprites[0];
 		    var xPos:int = thing.x;
 		    var yPos:int = thing.y;
 		    for (i=1; i<sprites.length; i++) {

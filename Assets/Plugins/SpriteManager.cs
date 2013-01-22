@@ -737,7 +737,7 @@ public class SpriteManager : MonoBehaviour
 	}
 	
 	// LateUpdate is called once per frame
-	virtual public void LateUpdate () 
+	public void LateUpdate () 
 	{
 		// Were changes made to the mesh since last time?
 		if (vertCountChanged)

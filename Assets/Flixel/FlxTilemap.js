@@ -10,7 +10,7 @@
 //
 //	//@desc		This is a traditional tilemap display and collision class
 //	public
- class FlxTilemap extends FlxCore
+ class FlxTilemap extends FlxBasic
 	{
 		private var widthInTiles:uint;
 		private var heightInTiles:uint;

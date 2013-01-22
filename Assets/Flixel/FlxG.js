@@ -73,7 +73,7 @@ class FlxG
 		static private var _masterVolume:Number;
 		
 		//Ccmera system variables
-		static public var followTarget:FlxCore;
+		static public var followTarget:FlxBasic;
 		static public var followLead:Point;
 		static public var followLerp:Number;
 		static public var followMin:Point;
@@ -308,10 +308,10 @@ class FlxG
 			return Mathf.Atan2(Y,X) * 180 / Mathf.PI;
 		};
 
-		//@desc		Tells the camera subsystem what FlxCore object to follow
+		//@desc		Tells the camera subsystem what FlxBasic object to follow
 		//@param	Target		The object to follow
 		//@param	Lerp		How much lag the camera should have (can help smooth out the camera movement)
-		static public function follow(Target:FlxCore, Lerp:Number/*=1*/):void
+		static public function follow(Target:FlxBasic, Lerp:Number/*=1*/):void
 		{
 			followTarget = Target;
 			followLerp = Lerp;
@@ -372,14 +372,14 @@ class FlxG
 			return velocity;
 		}
 		
-		//@desc		Checks to see if a FlxCore overlaps any of the FlxCores in the array, and calls a function when they do
-		//@param	Array		An array of FlxCore objects
-		//@param	Core		A FlxCore object
+		//@desc		Checks to see if a FlxBasic overlaps any of the FlxCores in the array, and calls a function when they do
+		//@param	Array		An array of FlxBasic objects
+		//@param	Core		A FlxBasic object
 		//@param	Collide		A function that takes two sprites as parameters (first the one from Array, then Sprite)
-		static public function overlapArray(array:FlxArray,Core:FlxCore,Collide:Function):void
+		static public function overlapArray(array:FlxArray,Core:FlxBasic,Collide:Function):void
 		{
 			if((Core == null) || !Core.exists || Core.dead) return;
-			var c:FlxCore;
+			var c:FlxBasic;
 			for(var i:uint = 0; i < array.length; i++)
 			{
 				c = array[i];
@@ -388,16 +388,16 @@ class FlxG
 			}
 		}
 		
-		//@desc		Checks to see if any FlxCore in Array1 overlaps any FlxCore in Array2, and calls Collide when they do
-		//@param	Array1		An array of FlxCore objects
-		//@param	Array2		Another array of FlxCore objects
-		//@param	Collide		A function that takes two FlxCore objects as parameters (first the one from Array1, then the one from Array2)
+		//@desc		Checks to see if any FlxBasic in Array1 overlaps any FlxBasic in Array2, and calls Collide when they do
+		//@param	Array1		An array of FlxBasic objects
+		//@param	Array2		Another array of FlxBasic objects
+		//@param	Collide		A function that takes two FlxBasic objects as parameters (first the one from Array1, then the one from Array2)
 		static public function overlapArrays(Array1:FlxArray,Array2:FlxArray,Collide:Function):void
 		{
 			var i:uint;
 			var j:uint;
-			var core1:FlxCore;
-			var core2:FlxCore;
+			var core1:FlxBasic;
+			var core2:FlxBasic;
 			if(Array1 === Array2)
 			{
 				for(i = 0; i < Array1.length; i++)
@@ -429,12 +429,12 @@ class FlxG
 		}
 		
 		//@desc		Collides a FlxSprite against the FlxCores in the array 
-		//@param	Array		An array of FlxCore objects
+		//@param	Array		An array of FlxBasic objects
 		//@param	Sprite		A FlxSprite object
 		static public function collideArray(Cores:FlxArray,Sprite:FlxSprite):void
 		{
 			if((Sprite == null) || !Sprite.exists || Sprite.dead) return;
-			var core:FlxCore;
+			var core:FlxBasic;
 			for(var i:uint = 0; i < Cores.length; i++)
 			{
 				core = Cores[i];
@@ -443,10 +443,10 @@ class FlxG
 			}
 		}
 		
-		//@desc		Collides an array of FlxSprites against a FlxCore object
+		//@desc		Collides an array of FlxSprites against a FlxBasic object
 		//@param	Sprites		An array of FlxSprites
-		//@param	Core		A FlxCore object
-		static public function collideArray2(Core:FlxCore,Sprites:FlxArray):void
+		//@param	Core		A FlxBasic object
+		static public function collideArray2(Core:FlxBasic,Sprites:FlxArray):void
 		{
 			if((Core == null) || !Core.exists || Core.dead) return;
 			var sprite:FlxSprite;
@@ -459,13 +459,13 @@ class FlxG
 		}
 		
 		//@desc		Collides the array of FlxSprites against the array of FlxCores
-		//@param	Cores		An array of FlxCore objects
+		//@param	Cores		An array of FlxBasic objects
 		//@param	Sprites		An array of FlxSprite objects
 		static public function collideArrays(Cores:FlxArray,Sprites:FlxArray):void
 		{
 			var i:uint;
 			var j:uint;
-			var core:FlxCore;
+			var core:FlxBasic;
 			var sprite:FlxSprite;
 			if(Cores === Sprites)
 			{

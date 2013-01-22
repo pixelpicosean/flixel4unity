@@ -23,14 +23,14 @@ class FlxArray extends Array
 		}
 		
 		//@desc		Find the first entry in the array that doesn't "exist"
-		//@return	Anything based on FlxCore (FlxSprite, FlxText, FlxBlock, etc)
-		public function getNonexist():FlxCore
+		//@return	Anything based on FlxBasic (FlxSprite, FlxText, FlxBlock, etc)
+		public function getNonexist():FlxBasic
 		{
 			if(this.length <= 0) return null;
 			var i:uint = 0;
 			while(true)
 			{
-				if(!(this[i] as FlxCore).exists)
+				if(!(this[i] as FlxBasic).exists)
 					return this[i];
 				if(++i >= this.length) break;
 			}
@@ -67,19 +67,19 @@ class FlxArray extends Array
 				this[Index] = null;
 		}
 		
-		//@desc		Kills the specified FlxCore-based object (FlxSprite, FlxText, etc) in this array
+		//@desc		Kills the specified FlxBasic-based object (FlxSprite, FlxText, etc) in this array
 		//@param	Core	The object you want to kill
-//		public function kill(Core:FlxCore):void
+//		public function kill(Core:FlxBasic):void
 //		{
 //			killAt(indexOf(Core));
 //		}
 		
-		//@desc		Kills the specified FlxCore-based object (FlxSprite, FlxText, etc) in this array
+		//@desc		Kills the specified FlxBasic-based object (FlxSprite, FlxText, etc) in this array
 		//@param	Index	The entry in the array that you want to kill
 		public function killAt(Index:uint):void
 		{
-			if(this[Index] instanceof FlxCore) {
-				var thing:FlxCore = this[Index];
+			if(this[Index] instanceof FlxBasic) {
+				var thing:FlxBasic = this[Index];
 				thing.kill();
 			}
 		}

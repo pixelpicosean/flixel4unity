@@ -8,7 +8,7 @@
 //	
 //	//@desc		A simple button class that calls a function when mouse-clicked
 //	public 
-class FlxButton extends FlxCore
+class FlxButton extends FlxBasic
 	{
         private var _onToggle:boolean;
         private var _off:FlxSprite;

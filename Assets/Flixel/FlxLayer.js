@@ -4,9 +4,9 @@
 
 //package com.adamatomic.flixel
 //{
-	//@desc		This is an organizational class that can update and render a bunch of FlxCore objects
+	//@desc		This is an organizational class that can update and render a bunch of FlxBasic objects
 //	public
-	 class FlxLayer extends FlxCore
+	 class FlxLayer extends FlxBasic
 	{
 		private var _children:FlxArray;
 
@@ -16,11 +16,11 @@
 			_children = new FlxArray();
 		}
 		
-		//@desc		Adds a new FlxCore subclass (FlxSprite, FlxBlock, etc) to the list of children
+		//@desc		Adds a new FlxBasic subclass (FlxSprite, FlxBlock, etc) to the list of children
 		//@param	Core	The object you want to add
-		virtual public function add(Core:FlxCore):FlxCore
+		public function add(Core:FlxBasic):FlxBasic
 		{
-			return _children.add(Core) as FlxCore;
+			return _children.add(Core) as FlxBasic;
 		}
 		
 		//@desc		Automatically goes through and calls update on everything you added, override this function to handle custom input and perform collisions
@@ -28,7 +28,7 @@
 		{
 			super.update();
 			for(var i:uint = 0; i < _children.length; i++) {
-				var child:FlxCore = _children[i];
+				var child:FlxBasic = _children[i];
 				if((child != null) && child.exists && child.active) child.update();
 			}
 		}
@@ -38,7 +38,7 @@
 		{
 			super.render();
 			for(var i:uint = 0; i < _children.length; i++) {
-				var child:FlxCore = _children[i];
+				var child:FlxBasic = _children[i];
 				if((child != null) && child.exists && child.visible) child.render();
 			}
 		}

@@ -8,7 +8,7 @@
 //	
 //	//@desc		A simple particle system class
 //	public 
-class FlxEmitter extends FlxCore
+class FlxEmitter extends FlxBasic
 	{
 		public var minVelocity:Point;
 		public var maxVelocity:Point;

@@ -10,7 +10,7 @@
 //	
 //	//@desc		This is the basic "environment object" class, used to create walls and floors
 //	public 
-class FlxBlock extends FlxCore
+class FlxBlock extends FlxBasic
 	{
 		public var pixels:Texture2D;
 		public var _rects:FlxArray;

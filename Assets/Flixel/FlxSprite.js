@@ -14,7 +14,7 @@
 //	
 //	//@desc		The main "game object" class, handles basic physics and animation
 //	public
- class FlxSprite extends FlxCore
+ class FlxSprite extends FlxBasic
 	{
 		static public var LEFT:boolean = false;
 		static public var RIGHT:boolean = true;
@@ -240,7 +240,7 @@
             // if (_sprite.hidden) FlxG.SpriteManager.ShowSprite(_sprite);
 		}
 		
-		//@desc		Checks to see if a point in 2D space overlaps this FlxCore object
+		//@desc		Checks to see if a point in 2D space overlaps this FlxBasic object
 		//@param	X			The X coordinate of the point
 		//@param	Y			The Y coordinate of the point
 		//@param	PerPixel	Whether or not to use per pixel collision checking
@@ -275,7 +275,7 @@
 		
 		//@desc		Call this function to "damage" (or give health bonus) to this sprite
 		//@param	Damage		How much health to take away (use a negative number to give a health bonus)
-		virtual public function hurt(Damage:Number):void
+		public function hurt(Damage:Number):void
 		{
 			health -= Damage;
 			if((health) <= 0)
@@ -292,7 +292,7 @@
 		
 		
 		//@desc		Called if/when this sprite is launched by a FlxEmitter
-		virtual public function onEmit():void { }
+		public function onEmit():void { }
 		
 		//@desc		Adds a new animation to the sprite
 		//@param	Name		What this animation should be called (e.g. "run")
@@ -334,14 +334,14 @@
 			}
 		}
 		
-		virtual public function set exists(value:boolean):void
+		public function set exists(value:boolean):void
 		{
 			super(value);
             if (_sprite && (!_exists || !_visible) && !_sprite.hidden) FlxG.SpriteManager.HideSprite(_sprite);
             if (_sprite && _exists && _visible && _sprite.hidden) FlxG.SpriteManager.ShowSprite(_sprite);
 		}
 
-		virtual public function set visible(value:boolean):void
+		public function set visible(value:boolean):void
 		{
 			super(value);
             if (_sprite && (!_exists || !_visible) && !_sprite.hidden) FlxG.SpriteManager.HideSprite(_sprite);
