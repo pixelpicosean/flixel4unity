@@ -1,5 +1,3 @@
-#**Repo moved to https://bitbucket.org/pixelpicosean/flixel4unity**#
-
 ##NOTICE:##
 ***flixel4unity is very old, and not recommend to use in any actual project.***
 
