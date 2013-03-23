@@ -1,5 +1,5 @@
 ##NOTICE:##
-***flixel4unity is very old, and not recommend to use in any actual project.***
+***flixel4unity is very old, and not recommend to use in any actual project.***<br>
 *This is not going to update cause I've completely switch to HTML5.*
 *But the project itself is usable if you're using Unity3 and familiar to Flixel older version.*
 
